@@ -1,32 +1,30 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
+#ifndef PRINT_F
+#define PRINT_F
 
+#include <unistd.h>
+#include <stdlib.h>
 #include <stdarg.h>
+
 /**
- * struct print - structure for printing various types
- * @t: type to print
- * @f: function to print
+ * struct convert - defines a structure for symbols and functions
+ * @sym: The operator
+ * @f: function associated
  */
-typedef struct print
+struct convert
 {
-  char *t;
+  char *sym;
   int (*f)(va_list);
-} print_t;
+};
+typedef struct convert conver_t;
 
-int _putchar(char c);
+/* Main functions */
+int parser(const char *format, conver_t f_list[], va_list arg_list);
 int _printf(const char *format, ...);
-int print_c(va_list c);
-int print_s(va_list s);
-int print_i(va_list i);
-int print_d(va_list d);
-int print_u(va_list u);
-int print_b(va_list b);
-int print_o(va_list o);
-int print_x(va_list x);
-int print_X(va_list X);
-int print_p(va_list p);
-int print_S(va_list S);
-int print_r(va_list r);
-int print_R(va_list R);
+int _write_char(char);
+int print_char(va_list);
+int print_string(va_list);
+int print_percent(va_list);
+int print_integer(va_list);
+int print_number(va_list);
 
-#endif  /* _HOLBERTON_H */
+#endif
