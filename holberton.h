@@ -10,6 +10,7 @@
  * @sym: The operator
  * @f: function associated
  */
+
 struct convert
 {
   char *sym;
@@ -27,4 +28,4 @@ int print_percent(va_list);
 int print_integer(va_list);
 int print_number(va_list);
 
-#endif
+#endif /* PRINT_F */
