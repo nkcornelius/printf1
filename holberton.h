@@ -1,5 +1,5 @@
-#ifndef PRINT_F
-#define PRINT_F
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -28,4 +28,4 @@ int print_percent(va_list);
 int print_integer(va_list);
 int print_number(va_list);
 
-#endif /* PRINT_F */
+#endif /* HOLBERTON_H */
